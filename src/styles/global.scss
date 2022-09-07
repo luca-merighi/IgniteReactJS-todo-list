@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #273FAD;
+    --green: #3FAD27;
+    --red: 	#ad273f;
+    --background: #ECECEC;
+    --shapes: #f9f9f9;
+    --text-title: #3D3D4D;
+    --text: #1C1C29;
+    --text-light: #A09CB1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+
+main {
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+    main {
+        max-width: 80%;
+    }
+}
+
+@media(min-width: 1024px) {
+    main {
+        max-width: 75%;
+    }
+}
+

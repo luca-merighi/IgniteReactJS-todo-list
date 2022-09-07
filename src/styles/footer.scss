@@ -1,0 +1,23 @@
+.footer {
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: center;
+
+    p {
+        color: var(--text-light);
+        
+        display: flex;
+        align-items: center;
+    
+        .heart-icon {
+            margin: 0 0.25rem;
+        }
+
+        span {
+            font-weight: 700;
+            color: var(--blue);
+            opacity: 0.75;
+        }
+    }
+}

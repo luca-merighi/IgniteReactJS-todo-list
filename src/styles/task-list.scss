@@ -1,0 +1,181 @@
+.task-list {
+    background-color: var(--shapes);
+    padding: 2rem 1.875rem;
+    
+    margin-top: -10rem;
+    width: 100%;
+
+    border-radius: 0.5rem;
+
+    .tasks-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    
+        h2 {
+            color: var(--text-title);
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            height: 2.6rem;
+        
+            input {
+                background-color: var(--background);
+                border: none;
+                color: var(--text);
+                padding: 0.875rem 1.2rem;
+                height: 100%;
+
+                border-radius: 0.25rem;
+
+                &::placeholder {
+                    color: var(--text-light);
+                    font-family: 'Poppins', sans-serif;
+                }
+
+                &:focus {
+                    outline: 2px solid var(--blue);
+                }
+            }
+
+            .button {
+                background-color: var(--green);
+                padding: 0.85rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+
+                border: none;
+                border-radius: 0.25rem;
+                
+                transition: filter 0.3s;
+
+                &:hover {
+                    filter: brightness(0.95);
+                }
+
+                &:focus {
+                    outline: 2px solid var(--text);
+                }
+            }
+        }
+    }
+
+    .tasks-container {
+        margin-top: 3rem;
+    
+        ul {
+            list-style: none;
+
+            .task-card {
+                padding: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                border-bottom: 1px solid #ebebeb;
+            
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    outline: none;
+
+                    p {
+                        color: var(--text);
+                    }
+
+                    &.completed {
+                        p {
+                            text-decoration: line-through;
+                            opacity: 0.75;
+                        }
+                    }
+
+                    .checkbox-container {
+                        display: block;
+                        position: relative;
+                        padding-left: 14px;
+                        margin-bottom: 18px;
+
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+
+                            &:checked {
+                                & ~ .checkmark {
+                                    background-color: var(--blue);
+                                }
+
+                                & ~ .checkmark:after {
+                                    display: block;
+                                }
+                            }
+                        }
+    
+                        .checkmark {
+                            position: absolute;   
+                            top: 0;
+                            left: 0;
+                            width: 16px;
+                            height: 16px;
+                            background-color: var(--background);
+                            border-radius: 2px;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                                left: 6px;
+                                top: 3px;
+                                width: 3px;
+                                height: 6px;
+                                border: solid white;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                }
+
+                .remove-task-button {
+                    background-color: transparent;
+                    border: none;
+                    padding: 0.25rem;
+                    transition: filter 0.3s;
+                    
+                    &:hover {
+                        filter: brightness(0.75);
+                    }
+
+                    &:focus {
+                        outline: 2px solid var(--red);
+                        border-radius: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .task-list {
+        margin-top: -8rem;
+        padding: 2.5rem 1.875rem;
+
+        .tasks-header {
+            flex-direction: row;
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+}
