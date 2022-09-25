@@ -5,6 +5,7 @@ básicos do React, como componentização, estado, propriedade, hooks e utiliza�
 <div>
 <img src="./public/todo-list.png">
 </div>  
+
 ### Aplicação construída com:
 <div>
 <img src="https://github.com/luca-merighi/Techs-Icons/blob/main/react-ts-sass.png?raw=true">
